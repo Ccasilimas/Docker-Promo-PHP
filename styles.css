@@ -2,97 +2,65 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar .sidebar-heading {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link:hover {
+    color: #007bff;
+}
+
+.tienda-promociones {
+    display: none;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
     text-align: center;
 }
 
-.promociones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.promocion-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 300px;
-    transition: transform 0.3s;
-}
-
-.promocion-item:hover {
-    transform: translateY(-10px);
-}
-
-.promocion-item img {
-    width: 100%;
-    height: auto;
-}
-
-.promo-details {
-    padding: 15px;
-}
-
-.promo-details h2 {
-    font-size: 1.5em;
-    margin: 0 0 10px;
-}
-
-.promo-details p {
-    font-size: 1em;
-    margin: 5px 0;
-}
-
-.promo-details .price {
-    color: #E91E63;
+.card-title {
     font-size: 1.2em;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.promo-details .discount {
-    background-color: #4CAF50;
-    color: white;
-    display: inline-block;
-    font-size: 0.9em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+.card-text {
+    margin-bottom: 10px;
 }
 
-/* Media queries for responsive design */
 @media (max-width: 768px) {
-    .promociones {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .promocion-item {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .promocion-item {
+    .btn-group-vertical button {
         width: 100%;
+        margin-bottom: 5px;
     }
 
-    .promo-details h2 {
-        font-size: 1.2em;
-    }
-
-    .promo-details .price {
-        font-size: 1em;
+    .navbar-toggler {
+        margin-right: 10px;
     }
 }
