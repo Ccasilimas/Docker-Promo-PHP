@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: 192.168.1.204:3306
+      DB_NAME: tapatio  # Cambia esto al nombre de tu base de datos existente
+      DB_USER: root  # Cambia esto al nombre de usuario de tu base de datos
+      DB_PASSWORD: Colombia1717.  # Cambia esto a la contraseña de tu base de datos
