@@ -49,7 +49,7 @@ if ($search_query !== '') {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="showPromociones('')">
     <header class="bg-success text-white text-center py-4">
         <h1>Promociones</h1>
     </header>
@@ -62,7 +62,7 @@ if ($search_query !== '') {
                     <button type="button" class="btn btn-success" onclick="showPromociones('')">Todas las Tiendas</button>
                     <?php
                     foreach ($Tiendas as $Tienda => $dummy) {
-                        echo '<button type="button" class="btn btn-success" onclick="showPromociones(\'' . htmlspecialchars($Tienda) . '\')">' . htmlspecialchars($Tienda) . '</button>';
+                        echo '<button type="button" class="btn btn-success w-100 mt-2" onclick="showPromociones(\'' . htmlspecialchars($Tienda) . '\')">' . htmlspecialchars($Tienda) . '</button>';
                     }
                     ?>
                 </div>
@@ -87,15 +87,15 @@ if ($search_query !== '') {
                             echo '<img src="' . htmlspecialchars($producto["img_url"]) . '" class="card-img-top" alt="' . htmlspecialchars($producto["product_name"]) . '">';
                             echo '<div class="card-body">';
                             echo '<h5 class="card-title">' . htmlspecialchars($producto["product_name"]) . '</h5>';
-                            echo '<p class="card-text"><del>Precio anterior: ' . htmlspecialchars($producto["old_price"]) . '</del></p>';
-                            echo '<p class="card-text text-danger font-weight-bold">Precio actual: ' . htmlspecialchars($producto["price"]) . '</p>';
-                            echo '<p class="card-text bg-success text-white p-2 rounded">Descuento: ' . htmlspecialchars($producto["discount"]) . '</p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
+                            echo '<p class="card-text">' . htmlspecialchars($producto["description"]) . '</p>';
+                            echo '<p class="card-text"><strong>Tienda: </strong>' . htmlspecialchars($producto["Tienda"]) . '</p>';
+                            echo '<p class="card-text"><strong>Precio Anterior: </strong>' . htmlspecialchars($producto["old_price"]) . ' COP</p>';
+                            echo '<p class="card-text"><strong>Precio Actual: </strong>' . htmlspecialchars($producto["price"]) . ' COP</p>';
+                            echo '<p class="card-textdescuento"><strong>Descuento: </strong>' . htmlspecialchars($producto["discount"]) . '</p>';
+                            echo '</div></div></div>';
                         }
                     } else {
-                        echo '<p>No hay promociones disponibles.</p>';
+                        echo '<p>No se encontraron productos.</p>';
                     }
                     ?>
                 </div>
@@ -114,7 +114,7 @@ if ($search_query !== '') {
             }
         }
     </script>
-    <!-- Incluir Bootstrap JS y dependencias -->
+    <!-- Incluir Bootstrap JS y dependencias de Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

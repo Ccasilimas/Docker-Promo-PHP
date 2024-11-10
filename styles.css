@@ -34,6 +34,10 @@ body {
 
 .card {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .card-img-top {
@@ -43,6 +47,10 @@ body {
 
 .card-body {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .card-title {
@@ -52,6 +60,20 @@ body {
 
 .card-text {
     margin-bottom: 10px;
+}
+
+.card-textdescuento {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff5733;
 }
 
 @media (max-width: 768px) {
