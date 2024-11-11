@@ -61,16 +61,6 @@ Este proyecto es una aplicación web para mostrar promociones de productos de di
 
 Para desplegar la aplicación en un entorno de producción, asegúrate de cambiar las variables de entorno en el archivo `.env` y utilizar un volumen persistente para la base de datos.
 
-## Contribuciones
-
-Las contribuciones son bienvenidas. Para contribuir, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
-4. Sube tus cambios a tu rama (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
-
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
